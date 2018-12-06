@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CalculatorBaseListener.h"
+#include <stack> 
 
 /*
  * interpet an aritmetic expression on integer

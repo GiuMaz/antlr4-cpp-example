@@ -6,7 +6,7 @@ project(simple_calc)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 # compiler must be 11 or 14
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
 # required if linking to static library
 add_definitions(-DANTLR4CPP_STATIC)
@@ -34,6 +34,6 @@ include_directories(${ANTLR_Calculator_OUTPUT_DIR})
 
 add_executable(calc
     ${CMAKE_SOURCE_DIR}/src/main.cpp
-    ${CMAKE_SOURCE_DIR}/src/calculator_interpreter.cpp
+    ${CMAKE_SOURCE_DIR}/src/CalculatorInterpreter.cpp
     ${ANTLR_Calculator_CXX_OUTPUTS})
 target_link_libraries(calc antlr4_static)
